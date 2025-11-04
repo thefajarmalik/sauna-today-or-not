@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sauna Decision</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+      color: #222;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      font-size: 2em;
+      letter-spacing: 0.5px;
+    }
+
+    button {
+      background-color: #0077b6;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 12px 24px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.25s, transform 0.1s;
+    }
+
+    button:hover {
+      background-color: #0096c7;
+      transform: translateY(-2px);
+    }
+
+    #answer {
+      margin-top: 25px;
+      font-size: 1.5rem;
+      min-height: 2em;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 15px;
+      font-size: 0.85rem;
+      color: #333;
+      opacity: 0.7;
+    }
+
+    #answer.thinking {
+      font-style: italic;
+      opacity: 0.6;
+      transition: opacity 0.3s ease;
+    }
+
+    #answer {
+      transition: opacity 0.4s ease;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Should I go to sauna today?</h1>
+  <button id="askBtn">Give me an answer</button>
+  <p id="answer">...</p>
+  <script src="script.js"></script>
+</body>
+
+</html>
