@@ -9,7 +9,7 @@ This repository contains a full-stack application created as part of the OP Kiit
 
 The project is separated into two main components:
 
-- **Frontend:** User interface built with plain HTML and JavaScript.
+- **Frontend:** User interface built with plain HTML and JavaScript, deployed to AWS S3.
 - **Backend:** Serverless API built using AWS Lambda with TypeScript, containerized via Docker.
 
 ## Project Structure
@@ -22,6 +22,16 @@ The project is separated into two main components:
 │   └── app/          # HTML and JavaScript files
 └── README.md         # Project documentation
 ```
+
+## Approach, Limitations, and Trade-offs
+
+- This project fulfills all the requirements:
+    - simple web app in any language/framework ✅
+    - separate frontend and backend ✅
+    - at least one HTTP request from frontend to backend ✅
+    - containerization of backend with Docker ✅
+    - uses the preferred AWS with AWS CDK in TypeScript ✅
+- The frontend and backend are separate deployments. The advantage is that the backend and frontend can be deployed/destroyed separately, reflecting real-world scenario for bigger systems. The downside is that deployments have to be made separately (more steps).
 
 ## Prerequisites
 
@@ -87,7 +97,7 @@ cdk synth
 cdk deploy
 ```
 
-- Copy the returned URL with `/sauna` suffix to point to the API,  e.g. `https://something.on.aws/sauna`
+- Copy the returned URL with `/sauna` suffix to point to the API, e.g. `https://something.on.aws/sauna`
 
 ### 2. Deploy frontend
 
@@ -95,7 +105,7 @@ cdk deploy
 - Deploy
 
 ```jsx
-cd backend
+cd frontend
 cdk synth
 cdk deploy
 ```
@@ -103,7 +113,6 @@ cdk deploy
 ### 3. Access application
 
 - Now, you can access the application via the returned URL.
-
 
 ## Destroy / Cleanup
 
@@ -122,9 +131,8 @@ cd frontend && cdk destroy
 ### Destroy both
 
 ```bash
-(cd frontend && cdk destroy) && (cd backend && cdk destroy
+(cd frontend && cdk destroy) && (cd backend && cdk destroy)
 ```
-
 
 ## License
 
