@@ -1,8 +1,8 @@
-# OP Kiitorata Trainee Program Assignment - “Should I go to sauna today?” App
+# Should I go to sauna today?
 
 ## Overview
 
-This repository contains a full-stack application created as part of the OP Kiitorata Trainee Program recruitment assignment. The application answers the question:
+This repository contains a full-stack application created as part of the OP Kiitorata Trainee Program recruitment assignment. The application randomly gives answer to the question:
 
 > “Should I go to sauna today?”
 > 
@@ -11,8 +11,6 @@ The project is separated into two main components:
 
 - **Frontend:** User interface built with plain HTML and JavaScript.
 - **Backend:** Serverless API built using AWS Lambda with TypeScript, containerized via Docker.
-
----
 
 ## Project Structure
 
@@ -24,8 +22,6 @@ The project is separated into two main components:
 │   └── app/          # HTML and JavaScript files
 └── README.md         # Project documentation
 ```
-
----
 
 ## Prerequisites
 
@@ -42,7 +38,7 @@ Before running or deploying the project, install Node.js, NPM, and Docker by fol
     npm install -g aws-cdk
     cdk --version
     ```
-    
+
 
 ### 2. AWS Setup
 
@@ -59,8 +55,6 @@ Before running or deploying the project, install Node.js, NPM, and Docker by fol
     aws sts get-caller-identity
     ```
     
-
----
 
 ## Setup & Installation
 
@@ -110,7 +104,6 @@ cdk deploy
 
 - Now, you can access the application via the returned URL.
 
----
 
 ## Destroy / Cleanup
 
@@ -132,7 +125,6 @@ cd frontend && cdk destroy
 (cd frontend && cdk destroy) && (cd backend && cdk destroy
 ```
 
----
 
 ## License
 
