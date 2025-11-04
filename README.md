@@ -71,8 +71,7 @@ Before running or deploying the project, install Node.js, NPM, and Docker by fol
 ### **1. Clone the repository**
 
 ```bash
-git clone https://github.com/thefajarmalik/sauna-today-or-not.git
-cd sauna-today-or-not
+git clone https://github.com/thefajarmalik/sauna-today-or-not.git && cd sauna-today-or-not
 ```
 
 ### 2. Install npm dependencies for both frontend and backend
@@ -93,7 +92,6 @@ cd sauna-today-or-not
 
 ```jsx
 cd backend
-cdk synth
 cdk deploy
 ```
 
@@ -106,7 +104,6 @@ cdk deploy
 
 ```jsx
 cd frontend
-cdk synth
 cdk deploy
 ```
 
